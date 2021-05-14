@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import ArmorSearch from './containers/ArmorSearch';
+
 export default function App() {
-  return <h1>Hello world!</h1>;
+  return <ArmorSearch />;
 }

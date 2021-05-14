@@ -11,7 +11,6 @@ module.exports = merge(commonConfig, {
   entry: './src/index.tsx',
   plugins: [
     new HtmlWebPackPlugin({
-      filename: '../index.html',
       template: path.join(__dirname, '..', 'assets', 'html', 'dev.html'),
     }),
   ],
@@ -20,7 +19,5 @@ module.exports = merge(commonConfig, {
     hot: true,
     compress: true,
     port: PORT,
-    contentBase: OUTPUT_PATH,
-    // publicPath: PUBLIC_PATH,
   },
 });

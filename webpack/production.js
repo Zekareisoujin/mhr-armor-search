@@ -3,12 +3,7 @@ const { merge } = require('webpack-merge');
 
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
-const {
-  PORT,
-  ASSET_OUTPUT_PATH,
-  PUBLIC_PATH,
-  VENDOR_LISTS,
-} = require('./constant');
+const { ASSET_OUTPUT_PATH, VENDOR_LISTS } = require('./constant');
 const commonConfig = require('./common');
 
 module.exports = merge(commonConfig, {
@@ -18,6 +13,7 @@ module.exports = merge(commonConfig, {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].js',
     path: ASSET_OUTPUT_PATH,
+    clean: true,
   },
   optimization: {
     splitChunks: {

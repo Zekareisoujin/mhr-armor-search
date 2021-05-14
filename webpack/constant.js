@@ -6,7 +6,7 @@ const OUTPUT_PATH = path.join(__dirname, '..', 'dist');
 const ASSET_OUTPUT_PATH = path.join(OUTPUT_PATH, 'assets');
 const PUBLIC_PATH = '/assets/';
 
-const VENDOR_LISTS = ['react', 'react-dom', 'react-router', 'react-router-dom'];
+const VENDOR_LISTS = ['react', 'react-dom'];
 
 module.exports = {
   PORT,

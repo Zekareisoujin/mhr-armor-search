@@ -13,9 +13,4 @@ module.exports = {
       },
     ],
   },
-  output: {
-    path: OUTPUT_PATH,
-    publicPath: PUBLIC_PATH,
-    clean: true,
-  },
 };
