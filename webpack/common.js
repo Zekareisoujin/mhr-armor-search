@@ -1,4 +1,20 @@
-const { OUTPUT_PATH, PUBLIC_PATH } = require('./constant');
+const tsLoader = 'ts-loader';
+const babelLoaderModern = {
+  loader: 'babel-loader',
+  options: {
+    presets: [
+      [
+        '@babel/preset-env',
+        {
+          modules: false,
+          targets: { esmodules: true },
+          bugfixes: true,
+        },
+      ],
+      '@babel/preset-react',
+    ],
+  },
+};
 
 module.exports = {
   resolve: {
@@ -9,7 +25,7 @@ module.exports = {
       {
         test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
-        use: 'ts-loader',
+        use: [tsLoader, babelLoaderModern],
       },
     ],
   },
