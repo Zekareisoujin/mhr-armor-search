@@ -5,7 +5,7 @@ import ArmorSearch from './containers/ArmorSearch';
 import CharmConfig from './containers/CharmConfig';
 
 // Components
-import { Layout, Tabs, Button } from 'antd';
+import { Layout, Tabs } from 'antd';
 
 // Styles
 import 'antd/dist/antd.css';
