@@ -1,4 +1,4 @@
-const tsLoader = 'ts-loader';
+const tsLoader = { loader: 'ts-loader' };
 const babelLoaderModern = {
   loader: 'babel-loader',
   options: {
@@ -15,6 +15,14 @@ const babelLoaderModern = {
     ],
   },
 };
+const cssLoader = {
+  loader: 'css-loader',
+  options: {
+    modules: true,
+  },
+};
+const sassLoader = { loader: 'sass-loader' };
+const styleLoader = { loader: 'style-loader' };
 
 module.exports = {
   resolve: {
@@ -25,7 +33,15 @@ module.exports = {
       {
         test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
-        use: [tsLoader, babelLoaderModern],
+        use: [babelLoaderModern, tsLoader],
+      },
+      {
+        test: /antd\.css$/,
+        use: [styleLoader, 'css-loader'],
+      },
+      {
+        test: /\.(sass|scss)$/,
+        use: [styleLoader, cssLoader, sassLoader],
       },
     ],
   },

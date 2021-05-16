@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge');
 
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
-const { PORT, OUTPUT_PATH, PUBLIC_PATH } = require('./constant');
+const { PORT } = require('./constant');
 const commonConfig = require('./common');
 
 module.exports = merge(commonConfig, {
